@@ -1,7 +1,11 @@
+/* CategorySelector.css */
+
 .category-selector {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
+    text-align: center;
+    /* Center the text and buttons */
 }
 
 .category-grid {
@@ -14,14 +18,21 @@
 .category-button {
     padding: 20px;
     font-size: 18px;
-    background-color: #007bff;
+    background-color: #27a8b1;
+    /* Light yellow-orange for contrast */
     color: white;
-    border: none;
+    border: 2px solid #312d26;
+    /* Slight border with a darker shade */
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
 }
 
 .category-button:hover {
-    background-color: #0056b3;
+    background-color: #ff9900;
+    /* Darker orange for hover effect */
+    transform: translateY(-3px);
+    /* Slight lift on hover */
 }
