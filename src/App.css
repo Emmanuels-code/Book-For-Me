@@ -1,3 +1,4 @@
+/* Existing styles */
 html,
 body {
   height: 100%;
@@ -53,6 +54,29 @@ h2 {
   padding-bottom: 20px;
 }
 
+/* New quotes section */
+.quotes-section {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #f0f0f0;
+}
+
+.quotes-section p {
+  margin: 5px 0;
+}
+
+/* Logo styling */
+.logo-container {
+  margin-top: 20px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+/* Main content styles */
 main {
   position: relative;
   z-index: 2;
@@ -64,7 +88,6 @@ main {
   background-color: transparent;
 }
 
-/* Ensure content within main is also transparent */
 main>* {
   background-color: transparent;
 }
