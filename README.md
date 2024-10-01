@@ -11,7 +11,7 @@
 
 ## Demo
 
-You can view a live demo of the project here: [Link to live demo (if hosted)].
+You can view a live demo of the project here: https://book-for-me-hooks.netlify.app/.
 
 ## Technology Stack
 
