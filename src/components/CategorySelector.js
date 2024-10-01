@@ -1,17 +1,18 @@
 // src/components/CategorySelector.js
-import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import React, { useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './CategorySelector.css';
 
 const categories = ['Fantasy', 'Science Fiction', 'Romance', 'Non-fiction'];
 
 function CategorySelector({ setCategory }) {
-    const navigate = useNavigate(); // useNavigate replaces useHistory
+    const navigate = useNavigate();
 
-    const handleCategorySelect = (category) => {
+    // useCallback to memoize the function and avoid unnecessary re-renders
+    const handleCategorySelect = useCallback((category) => {
         setCategory(category);
-        navigate('/page-count'); // Navigate to page-count selection
-    };
+        navigate('/page-count');
+    }, [setCategory, navigate]);
 
     return (
         <div className="category-selector">

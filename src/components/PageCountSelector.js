@@ -1,17 +1,18 @@
 // src/components/PageCountSelector.js
-import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import React, { useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './PageCountSelector.css';
 
 const pageCounts = ['100-150', '200-300', '400-500', '500+'];
 
 function PageCountSelector({ setPageCount }) {
-    const navigate = useNavigate(); // useNavigate replaces useHistory
+    const navigate = useNavigate();
 
-    const handlePageCountSelect = (pageCount) => {
+    // useCallback to memoize the function
+    const handlePageCountSelect = useCallback((pageCount) => {
         setPageCount(pageCount);
-        navigate('/suggestions'); // Navigate to book suggestions after page count is selected
-    };
+        navigate('/suggestions');
+    }, [setPageCount, navigate]);
 
     return (
         <div className="page-count-selector">
