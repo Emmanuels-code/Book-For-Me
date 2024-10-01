@@ -18,6 +18,14 @@ function App() {
           <header className="App-header">
             <h1>Book For Me</h1>
             <h2>Books For You!</h2>
+            {/* Scrolling text */}
+            {/* Scrolling text */}
+            <div className="scrolling-text-container">
+              <div className="scrolling-text">
+                Welcome to my simple book reading app. I love reading because it satisfies my curiosity, hence this simple Book App.
+              </div>
+            </div>
+
             {/* Quotes section */}
             <div className="quotes-section">
               <p>“A reader lives a thousand lives before he dies . . . The man who never reads lives only one.”</p>

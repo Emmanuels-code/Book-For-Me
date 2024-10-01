@@ -1,7 +1,17 @@
+/* PageCountSelector.css */
 .page-count-selector {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Dark transparent background */
+    border-radius: 12px;
+    /* Smooth corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Shadow for better visibility */
+    color: white;
+    /* Ensure text color is readable on dark background */
+    text-align: center;
 }
 
 .page-count-grid {
@@ -16,50 +26,26 @@
     font-size: 18px;
     background-color: #28a745;
     color: white;
-    border: none;
+    border: 2px solid transparent;
+    /* Transparent border initially */
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .page-count-button:hover {
     background-color: #218838;
+    /* Darker green on hover */
+    transform: translateY(-3px);
+    /* Slight lift on hover */
 }
 
-/* src/components/BookList.css */
-.book-list {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.book-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.book-cover {
-    width: 100px;
-    height: 150px;
-    object-fit: cover;
-    margin-right: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.book-info {
-    flex-grow: 1;
-}
-
-.book-info h3 {
-    margin: 0 0 10px 0;
-}
-
-.book-info p {
-    margin: 5px 0;
-    color: #666;
+.page-count-button:focus {
+    outline: none;
+    /* Remove default outline */
+    border-color: #ff9900;
+    /* Change border color on focus */
+    background-color: #1e7e34;
+    /* Slightly darker color on focus */
 }

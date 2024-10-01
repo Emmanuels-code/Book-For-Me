@@ -42,7 +42,7 @@ body {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: bold;
   margin: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -54,10 +54,40 @@ h2 {
   padding-bottom: 20px;
 }
 
-/* New quotes section */
+/* New scrolling text container */
+.scrolling-text-container {
+  width: 100%;
+  /* or set a specific width */
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+}
+
+/* Scrolling text style */
+.scrolling-text {
+  display: inline-block;
+  font-size: 2rem;
+  margin: 20px 0;
+  font-style: italic;
+  color: #000000;
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Quotes section */
 .quotes-section {
   margin-top: 20px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-style: italic;
   color: #f0f0f0;
 }
